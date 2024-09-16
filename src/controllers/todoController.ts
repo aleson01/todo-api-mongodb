@@ -45,8 +45,7 @@ export default {
         
         try {
             await todoServices.deleteTodo(id);
-            return res.status(204).json({ status: 204, msg:
-            "Tarefa excluída com sucesso" });
+            return res.status(204).json({ status: 204, msg: "Tarefa excluída com sucesso" });
         }
         catch (error) {
             return res.status(400).json({ status: 400, msg:{ error: "Erro ao excluir tarefa" } });

@@ -9,7 +9,7 @@ export default {
         return await newTodo.save();
     },
     async updateTodo(id: string, data: Partial<ITodo>): Promise<ITodo | null> {
-    return await Todo.findByIdAndUpdate(id, data, { new: true });
+        return await Todo.findByIdAndUpdate(id, data, { new: true });
     },
     async deleteTodo(id: string): Promise<void> {
         await Todo.findByIdAndDelete(id);
